@@ -16,31 +16,30 @@
 	<body>
 
 <!--Main Nav-->
-		<div id='header'>
-			<span id='logo_div'>
-				<p id='logo'>T<b>w</b></p>
-			</span>
-			<ul id='main_nav'>
-				<li class='nav_list'>Home</li>
-				<li class='nav_list'>Hotels</li>
-				<li class='nav_list'>
-					<i class="fas fa-caret-down"></i>
-					<p>Packages</p>
-<!--Drop Down-->		
-					<ul id='drop_down'>
-						<li>lorem ipsum</li>
-						<li>lorem ipsum</li>
-						<li>lorem ipsum</li>
-						<li>lorem ipsum</li>
-					</ul>	
-				</li>
-				<li class='nav_list'>Insurance</li>
-				<li class='nav_list'>Blog</li>
-				<li class='nav_list'>Contact Us</li>		
-			</ul>
+	
+	<div id='nav'>
+		<span id='logo'>TraverseWorld</span>
+		<ul class='nav_items'>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Hotels</a></li>
+			<li><a href="#">Packages</a></li>
+			<li><a href="#">Incurance</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		<i class='fas fa-bars' id='burger'></i>
+	</div>
 
-		</div>
-
+	<div class='mini_navs_items'>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Hotels</a></li>
+			<li><a href="#">Packages</a></li>
+			<li><a href="#">Incurance</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact Us</a></li>			
+		</ul>
+	</div>
 
 <!--Main Div-->
 	
@@ -53,15 +52,31 @@
 			</div>
 		</div>	
 
-
-
-
-
 <!--Second Div-->		
-		<div style="width: 100%; height: 1000px;">
+
+		<div id='best_s_packages'>
+			<h2>Our Best Sellers Packages</h2>
+			<div id='green_underline'></div>
+			<p id='pack_subtitle'>This is the best place to see our most solid and popular travel packages.</p>
+			<div id='pack_galery'>
+				<div id='large_galery'>
+					<div id='lg_price'>250$</div>
+					<i class="far fa-arrow-alt-circle-left"></i>
+					<i class="far fa-arrow-alt-circle-right"></i>
+					<div id='lg_desc'>
+						<i class="fas fa-info-circle"></i>
+						<p id='lg_city'>Greece Tour</p>
+						<p id='lg_days'>8 days</p>
+					</div>
+				</div>
+				<div id='small_galery'>
+					<div class='small_galery' data-id='1'></div>
+					<div class='small_galery' data-id='2'></div>
+					<div class='small_galery' data-id='3'></div>
+					<div class='small_galery' data-id='4'></div>
+				</div>
+			</div>
 		</div>
-
-
 
 <!--Main Script-->
 		
