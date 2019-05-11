@@ -99,3 +99,32 @@ function backward() {
 
 	console.log(iter);
 }	
+
+// Special Galery
+
+let special_class = document.querySelectorAll('.special_price');
+
+let x  = 1;
+
+
+let obj = {
+	name: 'Goran',
+	age: 30
+};
+
+let arr = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
+
+for(let x in special_class) {
+	console.log(special_class[x])
+};
+
+window.addEventListener('load', () => {
+	fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
+	.then(response => {
+		return response.json();
+	})
+	.then(data => {
+		console.log(data[15].location);
+	});
+
+});
