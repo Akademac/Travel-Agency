@@ -194,7 +194,7 @@ h2 {
 	height: 8rem;
 }
 
-.fa-arrow-alt-circle-left {
+#lg_left_arrow {
 	float: left;
 	font-size: 1.5rem;
 	color: var(--mainWhite);
@@ -206,7 +206,7 @@ h2 {
   	margin-left: 1rem;
 }
 
-.fa-arrow-alt-circle-right {
+#lg_right_arrow {
 	float: right;
 	font-size: 1.5rem;
 	color: var(--mainWhite);
@@ -369,6 +369,15 @@ h2 {
 	color: var(--mainWhite); 
 }
 
+/*Specials*/
+
+hr {
+	background-color: var(--mainGreen);
+	border-color: var(--mainGreen);
+	color:  var(--mainGreen);
+	width: 95%;
+}
+
 
 #specials {
 	width: 90%;
@@ -452,11 +461,36 @@ h2 {
 	text-align: center;
 }
 
-hr {
-	background-color: var(--mainGreen);
-	border-color: var(--mainGreen);
-	color:  var(--mainGreen);
-	width: 95%;
+.special_desc {
+	text-align: center;
+	color: var(--mainGreen);
+	background-color: white;
+	margin: 0px auto;
+	cursor: pointer;
+	opacity: .4;
+	transition: 2s all;
+	width: 100%;
+}
+
+.special_desc:hover {
+	opacity: .9;
+	width: 90%;
+}
+
+.spec_left_arrow {
+	color: var(--mainWhite);
+	cursor: pointer;
+	float: left;
+}
+
+.spec_right_arrow {
+	color: var(--mainWhite);
+	cursor: pointer;
+	float: right;
+}
+
+.special_loc {
+	display: inline;
 }
 
 /*Reference*/
