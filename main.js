@@ -102,21 +102,14 @@ function backward() {
 
 // Special Galery
 
-let special_class = document.querySelectorAll('.special_price');
+let special_class = document.querySelectorAll('.specials');
 
-let x  = 1;
+let special_price = document.querySelectorAll('.special_price');
+let special_state = document.querySelectorAll('.special_state');
+let special_loc = document.querySelectorAll('.special_loc');
+let special_days = document.querySelectorAll('.special_days');
 
 
-let obj = {
-	name: 'Goran',
-	age: 30
-};
-
-let arr = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
-
-for(let x in special_class) {
-	console.log(special_class[x])
-};
 
 window.addEventListener('load', () => {
 	fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
@@ -124,7 +117,34 @@ window.addEventListener('load', () => {
 		return response.json();
 	})
 	.then(data => {
-		console.log(data[15].location);
-	});
+		class Special {
+			constructor(price, state, loc, days) {
+				this.price = price;
+				this.state = state;
+				this.loc = loc;
+				this.days = days
+			};
 
+			addText(z) {
+				this.price.innerHTML = data[z].price;
+				this.state.innerHTML = data[z].state;
+				this.loc.innerHTML = data[z].location;
+				this.days.innerHTML = data[z].days;
+			};
+		};
+
+		let x = 15;
+
+		for(let i=0; i<12; i++) {
+			let y = new Special(special_price[i], special_state[i], special_loc[i], special_days[i]);
+			y.addText(x);
+			x++;
+		}
+
+		let spec_arrow_left = document.querySelectorAll('.spec_left_arrow');
+		let spec_arrow_right = document.querySelectorAll('.spec_right_arrow');
+		let spec_desc = document.querySelectorAll('.special_desc');
+
+	});
 });
+
