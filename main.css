@@ -378,6 +378,11 @@ hr {
 	width: 95%;
 }
 
+#cl_spec_info {
+	font-size: .9rem;
+	padding: 1rem;
+}
+
 
 #specials {
 	width: 90%;
@@ -470,6 +475,8 @@ hr {
 	opacity: .4;
 	transition: 2s all;
 	width: 100%;
+	height: 65%;
+	position: relative;
 }
 
 .special_desc:hover {
@@ -477,21 +484,72 @@ hr {
 	width: 90%;
 }
 
-.spec_left_arrow {
-	color: var(--mainWhite);
-	cursor: pointer;
-	float: left;
-}
-
-.spec_right_arrow {
-	color: var(--mainWhite);
-	cursor: pointer;
-	float: right;
-}
-
 .special_loc {
 	display: inline;
+	white-space: normal;
 }
+
+.fa-info-circle {
+	padding: .1rem;
+	cursor: pointer;
+	position: relative;
+	color: var(--mainWhite);
+}
+
+
+/*Second Page(special)*/
+
+#special_header {
+	width: 100%;
+	height: 3rem;
+	background-color: var(--mainBlack);
+	color: var(--mainWhite);
+	font-size: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	padding: .2rem;
+	position: fixed;
+}
+
+#special_div {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+#special_img { 
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#special_about_header {
+	text-align: left;
+}
+
+#special_about {
+	text-align: justify;
+	padding: 1rem;
+	font-size: 1.2rem;
+
+}
+
+#wicky {
+	border: none;
+	background-color: var(--mainBlack);
+	color: var(--mainWhite);
+	cursor: pointer;
+	border-radius: 3px;
+	transition: 1s all;
+}
+
+#wicky:hover {
+	background-color: var(--mainWhite);
+	color: var(--mainBlack);
+}
+
+
 
 /*Reference*/
 

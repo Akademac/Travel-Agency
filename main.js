@@ -108,6 +108,9 @@ let special_price = document.querySelectorAll('.special_price');
 let special_state = document.querySelectorAll('.special_state');
 let special_loc = document.querySelectorAll('.special_loc');
 let special_days = document.querySelectorAll('.special_days');
+let special_desc = document.querySelectorAll('.special_desc');
+let special_info = document.querySelectorAll('.fa-info-circle');
+
 
 
 
@@ -135,7 +138,7 @@ window.addEventListener('load', () => {
 
 		let x = 15;
 
-		for(let i=0; i<12; i++) {
+		for(let i=0; i<special_price.length; i++) {
 			let y = new Special(special_price[i], special_state[i], special_loc[i], special_days[i]);
 			y.addText(x);
 			x++;
@@ -147,4 +150,19 @@ window.addEventListener('load', () => {
 
 	});
 });
+
+(function secondPage() {
+	special_info.forEach(e => {
+		e.addEventListener('click', ee => {
+			let x = ee.target.dataset.info;
+			console.log(x);
+			for(let i=0; i<special_price.length+1; i++) {
+				if(x == i) {
+					window.open(`special.html#${i}`, '_self');
+				}
+			}
+		});
+	});	
+})();
+
 
