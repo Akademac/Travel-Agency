@@ -271,7 +271,7 @@ h2 {
 #adventures_div {
 	width: 85%;
 	height: 40rem;
-	background: var(--mainWhite);
+	background: rgba(0, 0, 0, 0);
 	margin: 0px auto;
 	margin-top: -5rem;
 	display: grid;
@@ -385,14 +385,19 @@ hr {
 
 
 #specials {
-	width: 90%;
+	width: 95%;
 	margin: 5rem auto;
 	height: 40em;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(3, 1fr);
+	background-image: url('Images/globe_2.png');
+	background-position: center;
+	background-size: cover;
 	grid-gap: 3rem;
+	background-attachment: fixed;
 }
+
 
 #specials > div:nth-child(1) {
 	background-image: url('Images/Specials/peru_0.jpg');
@@ -472,7 +477,7 @@ hr {
 	background-color: white;
 	margin: 0px auto;
 	cursor: pointer;
-	opacity: .4;
+	opacity: .8;
 	transition: 2s all;
 	width: 100%;
 	height: 65%;
@@ -480,7 +485,7 @@ hr {
 }
 
 .special_desc:hover {
-	opacity: .9;
+	opacity: 1;
 	width: 90%;
 }
 
@@ -615,26 +620,174 @@ hr {
 }
 
 #why_us {
-	width: 100%;
-	height: 18rem;
+	width: 98%;
+	margin: 5rem auto;
+	height: 35rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+#why_us_img {
 	background-image: url('Images/why_us.jpg');
-	background-size: cover;
-	background-position: center;
 	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-#why_us_h {
-	font-weight: bold;
-	text-align: center;
-	color: var(--mainWhite);
 	font-size: 3rem;
-	opacity: .8;
-	margin: 0px;
+	color: var(--mainWhite);
 }
 
+#why_us_img > h3 {
+	opacity: .8;
+}
+
+
+#why_us_txt {
+	background-color: var(--mainGrey);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 1rem;
+}
+
+.fa-check-circle {
+	font-size: 3rem;
+	color: var(--mainGreen);
+}
+
+.why_us_txt {
+	background-color: var(--mainWhite);
+	text-align: center;
+	font-size: 1rem;
+	padding-top: 1rem;
+}
+
+.why_us_txt > p {
+	text-align: justify-all;
+	padding-top:  1rem;
+}
+
+/*Stats Sounter*/
+
+#stats_count {
+	width: 100%;
+	height: 30rem;
+	background: var(--secondBlack);
+	background-attachment: fixed;
+	display: grid;
+	grid-template-rows: 35% 65%;
+}
+
+#stats_count_content {
+	width: 90%;
+	display: grid;
+	margin: 0pc auto;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.stats_count {
+	border: 1px solid var(--mainWhite);
+	border-radius: 50%;
+	width: 15rem;
+	height: 15rem;
+	color: var(--mainGreen);
+	text-align: center;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+.stats_count > i {
+	color: var(--mainGreen);
+	font-size: 2rem;
+}
+
+.stats_count p:nth-child(2) {
+	font-size: 2rem;
+	color: var(--mainWhite);
+}
+
+
+.stats_count p:nth-child(3) {
+	font-size: 1rem;
+	color: var(--mainWhite);
+}
+
+/*Reference*/
+
+#reference {
+	margin: 5rem auto;
+	background-color: var(--mainWhite);
+	width: 95%;
+	height: 30rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+}
+
+.ref {
+	text-align: center;
+	background: var(--mainGrey);
+	padding-top: 2rem;
+}
+
+.ref > i {
+	font-size: 10rem;
+}
+
+.ref > p {
+	margin: 5rem auto;
+	text-align: justify-all;
+	width: 80%;
+}
+
+/*Footer*/
+
+#footer {
+	width: 100%;
+	height: 20rem;
+	margin-top: 5rem;
+	background-color: var(--secondBlack);
+}
+
+#footer_div {
+	width: 90%;
+	height: 90%;
+	margin: 1rem auto;
+	background-color: var(--mainGrey);
+	text-align: center;
+}
+
+#footer_div > div {
+	margin-bottom: 2rem;
+}
+
+#footer_div > p {
+	padding: .5rem;
+	color: var(--secondBlack);
+	font-weight: bold;
+}
+
+#footer_div  i {
+	color: var(--mainGreen);
+}
+
+#footer_logo {
+	float: left;
+	color: var(--mainGreen);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: .1rem;
+}
+
+#footer > img {
+	width: 3rem;
+	height: 3rem;
+	float: right; 
+	margin-top: -2rem;
+}
 
 														/*Media queris*/
 
