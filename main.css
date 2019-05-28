@@ -121,7 +121,7 @@ html, body {
 #best_s_packages {
 	width: 100%;
 	height: 60rem;
-	margin-top: 2rem;
+	/*margin-top: 2rem;*/
 	background: var(--mainGrey);
 }
 
@@ -619,6 +619,8 @@ hr {
 	text-align: center;
 }
 
+/*Why US*/
+
 #why_us {
 	width: 98%;
 	margin: 5rem auto;
@@ -792,7 +794,7 @@ hr {
 														/*Media queris*/
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
 
 /*Nav*/
 	
@@ -813,6 +815,8 @@ hr {
 		float: right;
 		z-index: 1;
 		cursor: pointer;
+		box-sizing: border-box;
+		margin-bottom: 0rem;
 	}
 
 	.mini_navs_items {
@@ -854,7 +858,7 @@ hr {
 		grid-template-columns: none;
 		grid-template-rows: repeat(2, 1fr);
 		width: 100%;
-		height: 50rem;
+		height: 60rem;
 	}
 
 	.fa-arrow-alt-circle-left {
@@ -869,6 +873,127 @@ hr {
 	  	transform: translateY(-40%);
 	}
 
+
+/*Adventures*/
+		
+	#adventures {
+		margin-top: 15rem;
+	}
+
+	#adventures_div {
+		width: 85%;
+		height: 40rem;
+		background: rgba(0, 0, 0, 0);
+		margin: 0px auto;
+		margin-top: -5rem;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(4, 1fr);
+		grid-gap: 1rem;
+	}
+
+
+	.adventures_div:hover {
+		width: 25%;
+		height: 50%;
+		font-size: 1.5rem;
+	}
+
+/*Specials*/
+
+	#cl_spec_info {
+		font-size: .7rem;
+		padding: .5rem;
+		padding-left: 2.2rem;
+	}
+
+	/*loosing I*/
+	#specials {
+		width: 95%;
+		margin: 5rem auto;
+		height: 80em;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+	}
+
+
+	.special_desc:hover {
+		opacity: 1;
+		width: 100%;
+	}
+
+	/*loosing I*/
+	.fa-info-circle {
+		padding: .1rem;
+		cursor: pointer;
+		position: absolute;
+		color: var(--mainWhite);
+	}
+
+	.special_desc {
+		font-size: .9rem;	
+	}
+
+/*Why US*/
+
+	#why_us {
+		width: 98%;
+		margin: 5rem auto;
+		height: 70rem;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(2, 1fr);
+
+	}
+	
+	.why_us_txt {
+		background-color: var(--mainWhite);
+		text-align: center;
+		font-size: 1rem;
+		padding-top: 3rem;
+	}
+
+
+/*Stats Sounter*/
+
+	/*problem*/
+	#stats_count {
+		width: 100%;
+		height: 45rem;
+		grid-template-rows: 25% 75%;	
+	}
+
+	#stats_count_content {
+		width: 80%;
+		display: grid;
+		margin: 0px auto;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 1rem;
+	}
+
+	.stats_count {
+		margin: 0px auto;
+	}
+
+	.stats_count > i {
+		color: var(--mainGreen);
+		font-size: 1.5rem;
+	}
+
+	.stats_count p:nth-child(2) {
+		font-size: 1.5rem;
+		color: var(--mainWhite);
+	}
+
+
+	.stats_count p:nth-child(3) {
+		font-size: .8rem;
+		color: var(--mainWhite);
+	}
+
+
 /*Other Page(Specials)*/
 
 	#special_div {
@@ -876,6 +1001,63 @@ hr {
 		display: grid;
 		grid-template-columns: none;
 		grid-template-rows: repeat(2, 1fr);
+	}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+	#main_div_text {
+		padding-left: 0rem;
+		margin-left: 0rem;
+	}
+
+	.subtitles {
+		width: 50%;
+	}
+
+	#adventures {
+		margin-top: 25rem;
+	}
+
+	#cl_spec_info {
+		font-size: .7rem;
+		padding: .5rem;
+		padding-left: .2rem;
+		margin-top: .4rem;
+	}
+
+
+	.special_desc {
+		font-size: .7rem;	
+	}
+
+/*Stats Sounter*/
+
+	/*problem*/
+	#stats_count {
+		width: 100%;
+		height: 87rem;
+		grid-template-rows: 15% 85%;	
+	}
+
+	#stats_count_content {
+		width: 80%;
+		display: grid;
+		margin: 0px auto;
+		grid-template-columns: none;
+		grid-template-rows: repeat(4, 1fr);
+		grid-gap: 1rem;
+	}
+
+/*Reference*/
+
+	#reference {
+		height: 85rem;
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: repeat(3, 1fr);
 	}
 
 }
