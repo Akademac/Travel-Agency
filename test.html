@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galery Test</title>
+</head>
+	<style type="text/css">
+
+		#container {
+			width: 60rem;
+			height: 34rem;
+			/*overflow-x: hidden;*/
+			background-color: red;
+			margin: 2rem auto;
+			overflow-x: hidden;		
+		}
+
+		img {
+			width: 60rem;
+			height: 34rem;
+		}
+		#img_container {
+			display: flex;	
+
+		}
+
+	</style>
+<body>
+	<div id='container'>
+		<div id='img_container'>
+			<img src="Images/Specials/peru_1.jpg">
+			<img src="Images/Specials/peru_2.jpg">
+			<img src="Images/Specials/peru_3.jpg">
+			<img src="Images/Specials/peru_4.jpg">
+			<img src="Images/Specials/argentina_0.jpg">
+			<img src="Images/Specials/argentina_4.jpg">
+			<img src="Images/Specials/argentina_3.jpg">
+			<img src="Images/Specials/argentina_2.jpg">
+			<img src="Images/Specials/peru_1.jpg">
+			<img src="Images/Specials/mexico_0.jpg">
+		</div>
+	</div>
+	<button id='btn'>click</button>
+	<script>
+		let img = document.querySelector('#img_container');
+		let btn = document.querySelector('#btn');
+		let x = 0;
+		let int; 
+			int = setInterval(go, 200)
+			function go() {
+				img.style.transform = "transateX( x + 'px')";
+				x-=10;
+			}
+
+			btn.addEventListener('click', () => {
+				clearInterval(int);
+			});
+			
+	</script>
+</body>
+</html>

@@ -22,7 +22,7 @@ fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
 			console.log(data[i].img[0]);
 			img.style.backgroundImage = `url(${data[i].img[int]})`;
 			s_a_header.innerHTML = data[i].state;
-			special_about.innerHTML = data[i].desc + '...';
+			special_about.innerHTML = data[i].desc + '<br />' +'...';
 			interval = setInterval(() =>{
 			if(int >=5) {
 				int = 0;
@@ -32,7 +32,7 @@ fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
 				img.style.backgroundImage = `url(${data[i].img[int]})`;
 				int++;
 			}				
-			}, 4000);
+			}, 2000);
 		wicky.addEventListener('click', e => {
 			window.open(`https://en.wikipedia.org/wiki/${data[i].state}`, '_blank');
 		});

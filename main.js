@@ -100,6 +100,41 @@ function backward() {
 	console.log(iter);
 }	
 
+// Adventures
+
+
+let more_about_adv = document.querySelector('#view_all_adv');
+
+let adventures = document.querySelectorAll('.adventures_div');
+
+
+adventures.forEach(e => {
+	e.addEventListener('click', ee => {
+		let x = ee.target.dataset.adv;
+		console.log(x);
+		if(x == 1) {
+			window.open('adventures.html#adv_skiing', '_self');
+		}
+		else if(x == 2) {
+			window.open('adventures.html#adv_hiking', '_self');
+		}
+		else if(x == 3) {
+			window.open('adventures.html#adv_cycling', '_self');
+		}
+		else if(x == 4) {
+			window.open('adventures.html#adv_rafting', '_self');
+		}
+	})
+});
+
+
+
+more_about_adv.addEventListener('click', () => {
+	window.open('adventures.html', '_self');
+});
+
+
+
 // Special Galery
 
 let special_class = document.querySelectorAll('.specials');
