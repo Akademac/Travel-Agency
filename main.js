@@ -201,3 +201,32 @@ window.addEventListener('load', () => {
 })();
 
 
+// animations
+
+
+window.addEventListener('scroll', () => {
+	const scroll = window.scrollY;
+	// const scrollNumber = document.documentElement.scrollHeight - window.innerHeight;
+
+	if(scroll > 500) {
+		lg_galery.classList.add('lg_galery_anim');
+		small_galery_anim();
+	}
+});
+
+
+let small_galery_anim = () => {
+	let a = sm_galery[0];
+	let b = sm_galery[1];
+	let c = sm_galery[2];
+	let d = sm_galery[3];
+
+	a.classList.add('small_galer_1_anim');
+	a.style.display = 'inline';
+	b.classList.add('small_galer_2_anim');
+	b.style.display = 'inline';
+	c.classList.add('small_galer_3_anim');
+	c.style.display = 'inline';
+	d.classList.add('small_galer_4_anim');
+	d.style.display = 'inline';
+};
