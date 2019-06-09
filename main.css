@@ -19,12 +19,21 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 }
 
+body {
+	overflow-x: hidden;	
+}
+
 /*Main nav*/
 
 #logo {
 	margin: .3rem;
 	padding-top: 1rem;
 	color: var(--mainWhite);
+	/*animations*/
+	animation-name: main_logo;
+	animation-duration: 10s;
+	animation-iteration-count: 40s;
+	animation-timing-function: ease-out;
 }
 
 #nav {
@@ -95,6 +104,11 @@ html, body {
 	margin-left: 3rem;
 	border-left: .3rem solid var(--mainWhite);
 	height: 11rem;
+	/*animations*/
+	animation-name: main_div_text;
+	animation-duration: 15s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 20s;
 }
 
 #main_div_text > p {
@@ -114,6 +128,11 @@ html, body {
 	text-align: center;
 	padding: .3rem;
 	cursor: pointer;
+	/*animations*/
+	animation-name: main_div_button;
+	animation-duration: 15s;
+	animation-iteration-count: 40s;
+	animation-timing-function: ease-out;
 }
 
 /*Second Div*/
@@ -167,6 +186,16 @@ h2 {
 	background-size: cover;
 	box-shadow: 1px 1px 1px var(--mainGrey);
 	position: relative;
+	transform: translateX(-50rem);
+}
+
+.lg_galery_anim {
+	/*animations*/
+	transform: translateX(-50rem);
+	animation-name: lg_galery;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
 }
 
 #lg_price {
@@ -224,35 +253,85 @@ h2 {
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	grid-gap: 1rem;
+	position: relative;
 }
 
 #small_galery div:nth-child(1) {
 	background-image: url('Images/galery_london_1.jpg');
 	background-position: center;
 	background-size: cover;
+	transform: translateX(20rem);
+	position: relative;
+	display: none;
 }
 
 #small_galery div:nth-child(2) {
 	background-image: url('Images/galery_paris_1.jpg');
 	background-position: center;
 	background-size: cover;
+	transform: translateY(-20rem);
+	position: relative;
+	display: none;
 }
 
 #small_galery div:nth-child(3) {
 	background-image: url('Images/galery_rome_1.jpg');
 	background-position: center;
 	background-size: cover;
+	transform: translateY(50rem);	
+	position: relative;
+	display: none;
 }
 
 #small_galery div:nth-child(4) {
 	background-image: url('Images/galery_prague_1.jpg');
 	background-position: center;
 	background-size: cover;
+	transform: translateX(-20rem);	
+	position: relative;
+	display: none;
 }
 
 .small_galery {
 	box-shadow: 1px 1px 1px var(--mainBlack);
 	cursor: pointer;
+}
+
+
+.small_galer_1_anim {
+	/*animations*/
+	transform: translateX(-50rem);
+	animation-name: small_galer_first_anim;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+.small_galer_2_anim {
+	/*animations*/
+	transform: translateX(-50rem);
+	animation-name: small_galer_second_anim;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;	
+}
+
+.small_galer_3_anim {
+	/*animations*/
+	transform: translateX(-50rem);
+	animation-name: small_galer_third_anim;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;	
+}
+
+.small_galer_4_anim {
+	/*animations*/
+	transform: translateX(-50rem);
+	animation-name: small_galer_forth_anim;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;	
 }
 
 /*Adventures*/
@@ -789,8 +868,12 @@ hr {
 	height: 3rem;
 	float: right; 
 	margin-top: -2rem;
+	transition: all 2s;
 }
 
+#footer_logo:hover {
+	transform: rotateY(360deg);
+}
 														/*Media queris*/
 
 
@@ -1074,4 +1157,80 @@ hr {
 		grid-template-rows: repeat(3, 1fr);
 	}
 
+}
+
+/*ANIMATION*/
+
+@keyframes main_logo {
+	50% {
+		color: var(--mainBlack);
+	}
+}
+
+
+@keyframes main_div_text {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(.9);	
+	}
+}
+
+@keyframes main_div_button {
+	50% {
+		color: var(--mainBlack);
+	}
+}
+
+@keyframes lg_galery {
+
+	50% {
+		transform: translateX(3rem);
+	}
+
+	100% {
+		transform: translateX(0rem);
+	}
+}
+
+@keyframes small_galer_first_anim {
+	50% {
+		transform: translateX(3rem);
+	}
+
+	100% {
+		transform: translateX(0rem);
+	}	
+}
+
+@keyframes small_galer_second_anim {
+	50% {
+		transform: translateY(3rem);
+	}
+
+	100% {
+		transform: translateY(0rem);
+	}	
+}
+
+@keyframes small_galer_third_anim {
+	50% {
+		transform: translateY(3rem);
+	}
+
+	100% {
+		transform: translateY(0rem);
+	}	
+}
+
+@keyframes small_galer_forth_anim {
+	50% {
+		transform: translateX(3rem);
+	}
+
+	100% {
+		transform: translateX(0rem);
+	}	
 }
