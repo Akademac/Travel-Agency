@@ -14,6 +14,32 @@ burger.addEventListener('click', () => {
 });
 
 
+//find more button
+
+let find_more_btn = document.querySelector('#find_more_btn');
+
+let scrollInterval;
+
+let scrollx = 0;
+
+find_more_btn.addEventListener('click', () => {
+	scrollInterval = setInterval(go, 5);
+	scrollx = 0;
+});
+
+function go() {
+	if(scrollx >= 875) {
+		clearInterval(scrollInterval);
+	}
+	else {
+		window.scrollTo(0, scrollx);
+		scrollx+=1;
+	}
+}
+
+
+
+
 // galery images 
 
 
@@ -186,11 +212,69 @@ window.addEventListener('load', () => {
 	});
 });
 
+// Stats count 
+
+let interval_1;
+let interval_2;
+let interval_3;
+let interval_4;
+
+
+let count_cust = document.querySelector('#count_customers');
+let count_trips = document.querySelector('#count_trips');
+let count_flights = document.querySelector('#count_flights');
+let count_r_trips = document.querySelector('#count_r_trips');
+
+let cust_numbers = 0;
+let trips_numbers = 0;
+let flights_numbers = 0;
+let r_trips_numbers = 0;
+
+function stats_count_1() {
+	if(cust_numbers >= 2801) {
+		clearInterval(interval_1);
+	}
+	else {
+		count_cust.innerHTML = cust_numbers;
+		cust_numbers++;
+	}
+};
+
+
+function stats_count_2() {
+	if(trips_numbers >= 901) {
+		clearInterval(interval_2);
+	}
+	else {
+		count_trips.innerHTML = trips_numbers;
+		trips_numbers++;
+	}
+};
+
+function stats_count_3() {
+	if(flights_numbers >= 401) {
+		clearInterval(interval_3);
+	}
+	else {
+		count_flights.innerHTML = flights_numbers;
+		flights_numbers++;
+	}
+};
+
+function stats_count_4() {
+	if(r_trips_numbers >= 501) {
+		clearInterval(interval_4);
+	}
+	else {
+		count_r_trips.innerHTML = r_trips_numbers;
+		r_trips_numbers++;
+	}
+};
+
 (function secondPage() {
 	special_info.forEach(e => {
 		e.addEventListener('click', ee => {
 			let x = ee.target.dataset.info;
-			console.log(x);
 			for(let i=0; i<special_price.length+1; i++) {
 				if(x == i) {
 					window.open(`special.html#${i}`, '_self');
@@ -214,7 +298,7 @@ let check_circle = document.querySelectorAll('.check_circle');
 
 window.addEventListener('scroll', () => {
 	const scroll = window.scrollY;
-	// const scrollNumber = document.documentElement.scrollHeight - window.innerHeight;
+	const scrollNumber = document.documentElement.scrollHeight - window.innerHeight;
 	console.log(scroll);
 	if(scroll > 500) {
 		lg_galery_anim();
@@ -232,6 +316,18 @@ window.addEventListener('scroll', () => {
 
 	if(scroll > 3400) {
 		check_circle_anim();
+	}
+
+	if(scroll > 4000) {
+		interval_1 = setInterval(stats_count_1, 10);
+		interval_2 = setInterval(stats_count_2, 15);
+		interval_3 = setInterval(stats_count_3, 20);
+		interval_4 = setInterval(stats_count_4, 22);
+
+	}
+
+	if(scroll == scrollNumber) {
+		last_green_underline_anim();
 	}
 });
 
@@ -257,12 +353,12 @@ let small_galery_anim = () => {
 
 let green_line_anim = () => {
 	green_line.classList.add('green_line_anim');
-	console.log('Green line MOVE!!!!');
 };
 
 let adventures_text_anim = () => {
 	adventures_h.classList.add('adventures_h_anim');
 	adventures_p.classList.add('adventures_p_anim');
+	adventures_h.style.display = 'block';
 };
 
 let specials_anim = () => {
@@ -271,9 +367,12 @@ let specials_anim = () => {
 	});
 };
 
-
 let check_circle_anim = () => {
 	check_circle.forEach(e => {
 		e.classList.add('fa-check-circle_anim');
 	});
+}
+
+let last_green_underline_anim = () => {
+	last_green_underline.classList.add('green_line_anim');
 }
