@@ -133,6 +133,11 @@ body {
 	animation-duration: 15s;
 	animation-iteration-count: 40s;
 	animation-timing-function: ease-out;
+	transition-duration: 2s;
+}
+
+#main_div_text > div:hover {
+	color: var(--mainBlack);
 }
 
 /*Second Div*/
@@ -352,18 +357,21 @@ h2 {
 }
 
 #adventures > h2 {
-	transform: translateX(-20rem);
+	transform: translateY(-20rem);
+	position: relative;
+	display: none;
 }
 
 #adventures > p {
 	color: var(--mainWhite);
-	transform: translateX(20rem);	
+	transform: translateY(20rem);
+	position: relative;	
 }
 
 .adventures_h_anim {
 	/*animations*/
 	animation-name: adventures_h_anim;
-	animation-duration: .2s;
+	animation-duration: .5s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
@@ -372,7 +380,7 @@ h2 {
 .adventures_p_anim {
 	/*animations*/
 	animation-name: adventures_p_anim;
-	animation-duration: .6s;
+	animation-duration: 1s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
@@ -1307,21 +1315,21 @@ hr {
 
 @keyframes adventures_h_anim {
 	from {
-		transform: translateX(-20rem;);
+		transform: translateY(-20rem;);
 	}
 
 	to {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
 @keyframes adventures_p_anim {
 	from {
-		transform: translateX(20rem;);
+		transform: translateY(20rem;);
 	}
 
 	to {
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 }
 
