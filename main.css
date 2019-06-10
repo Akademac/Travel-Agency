@@ -161,6 +161,14 @@ h2 {
 	border-radius: 10rem;
 }
 
+.green_line_anim {
+	/*animations*/
+	animation-name: green_line_anim;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1;
+}
+
 .subtitles {
 	margin: 1rem auto;
 	text-align: center;
@@ -343,8 +351,31 @@ h2 {
 	text-align: center;
 }
 
+#adventures > h2 {
+	transform: translateX(-20rem);
+}
+
 #adventures > p {
 	color: var(--mainWhite);
+	transform: translateX(20rem);	
+}
+
+.adventures_h_anim {
+	/*animations*/
+	animation-name: adventures_h_anim;
+	animation-duration: .2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+.adventures_p_anim {
+	/*animations*/
+	animation-name: adventures_p_anim;
+	animation-duration: .6s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
 }
 
 #adventures_div {
@@ -532,6 +563,14 @@ hr {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+.specials_anim {
+	/*animations*/
+	animation-name: specials_anim;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
 }
 
 #sp_trips {
@@ -736,6 +775,15 @@ hr {
 .fa-check-circle {
 	font-size: 3rem;
 	color: var(--mainGreen);
+
+}
+
+.fa-check-circle_anim {
+/*aniamtions*/
+	animation-name: fa-check-circle_anim;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
 }
 
 .why_us_txt {
@@ -1233,4 +1281,66 @@ hr {
 	100% {
 		transform: translateX(0rem);
 	}	
+}
+
+@keyframes green_line_anim {
+	0% {
+		transform: translateX(.5rem);
+	}
+
+	25% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-.5rem);
+	}
+
+	75% {
+		transform: translateX(.5rem);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes adventures_h_anim {
+	from {
+		transform: translateX(-20rem;);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes adventures_p_anim {
+	from {
+		transform: translateX(20rem;);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes specials_anim {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes fa-check-circle_anim {
+	from {
+		transform: scale(2);
+	}
+
+	to {
+		transform: scale(1);
+	}
 }
