@@ -625,6 +625,7 @@ hr {
 	cursor: pointer;
 	position: absolute;
 	color: var(--mainWhite);
+	margin-top: -1rem;
 }
 
 
