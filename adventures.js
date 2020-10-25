@@ -1,5 +1,6 @@
 let adv_p = document.querySelectorAll('.adv_p');
 let arr = [];
+let x = 27;
 
 fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
 .then(response => {
@@ -14,6 +15,5 @@ fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
 	arr[1].innerHTML = data[28].desc;
 	arr[2].innerHTML = data[29].desc;
 	arr[3].innerHTML = data[30].desc;
-	
 
 })
