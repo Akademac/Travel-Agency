@@ -712,16 +712,14 @@ hr {
 	margin: 0px auto;
 }
 
-#adv_hiking {
-	background-image: url('Images/Adventures/hiking.jpg');
-	background-position: bottom;
-	background-size: cover;
-}
+
+
 
 #adv_cycling {
 	background-image: url('Images/Adventures/cycling.jpg');
 	background-position: bottom;
 	background-size: cover;
+
 }
 
 #adv_skiing {
@@ -735,6 +733,14 @@ hr {
 	background-position: top;
 	background-size: cover;
 }
+
+#adv_hiking {
+	background-image: url('Images/Adventures/hiking.jpg');
+	background-position: bottom;
+	background-size: cover;
+
+}
+
 
 .adv_desc {
 	text-align: justify;
@@ -1216,7 +1222,7 @@ hr {
 
 }
 
-/*ANIMATION*/
+/*ANIMATIONS*/
 
 @keyframes main_logo {
 	50% {
@@ -1316,7 +1322,7 @@ hr {
 
 @keyframes adventures_h_anim {
 	from {
-		transform: translateY(-20rem;);
+		transform: translateY(-20rem);
 	}
 
 	to {
@@ -1326,7 +1332,7 @@ hr {
 
 @keyframes adventures_p_anim {
 	from {
-		transform: translateY(20rem;);
+		transform: translateY(20rem);
 	}
 
 	to {
